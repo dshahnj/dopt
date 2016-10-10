@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<title>Todo Application</title>
+
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/myCSS.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+
+
+  	<script src="/js/app.js"></script>
+  	<script src="/js/controllers/myController.js"></script>
+  	<script src="/js/services/todoListService.js"></script>
+  	
+
+</head>
+
+<body ng-controller="myController" ng-init="init()">
+<section>
+	<div >
+		<div class="container-fluid heading">
+			<div class="row">
+				<div class="col-md-12">
+					<h1>My Todo App</h1>
+				</div>
+			</div>
+		</div>
+		
+		<div class="container-fluid">
+			<div class="col-md-9">
+				<input type="text" ng-model="todoItem" placeholder="What do you want to do?" class="form-control"
+				my-enter="addItem(todoItem)">
+			</div>
+		</div>
+		
+		<div class="myLine"></div>
+	</div>
+	
+	<div ng-model="flag">
+
+		<div class="container-fluid hideBtn" ng-hide="flag === true">
+		
+			<button type="button" class="btn btn-primary hideBtn1" >All</button>
+			<button type="button" class="btn  hideBtn2" >Completed</button>
+			<button type="button" class="btn  hideBtn3" >Pending</button>
+		</div>
+	</div>
+	
+		
+	
+</section>
+
+
+</body>
+</html>
